@@ -1,0 +1,483 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    color:#555;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+    scroll-margin-top: 123px;
+    flex-wrap:wrap;
+}
+
+/* --------------------------------- Allgemein */
+
+h1{
+    color:#00a8ff;
+    font-size:60px;
+    text-transform: uppercase;
+}
+h2{
+    font-size:40px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 37px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #00a8ff;
+}
+p {
+    margin-bottom: 30px;
+    line-height: 26px;
+    font-size: 19px;
+    font-weight: 300;
+}
+p:last-child{
+    margin-bottom:0;
+}
+a:hover{
+    color:#00a8ff;
+}
+button{
+    border:none;
+    background-color:transparent;
+}
+button a{
+    border: 1px solid #555;
+    font-size:15px;
+    padding: 20px 40px;
+    display:block;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+button a:hover{
+    color:#fff;
+    background-color:#00a8ff;
+    border-color:#00a8ff;
+}
+.zentriert{
+    text-align:center;
+}
+
+/* --------------------------------- Blau */
+
+.blau{
+    background-color:#00a8ff;
+    color:#fff;
+}
+.blau h3, .blau p, .blau a{
+    color:#fff;
+}
+.blau a:hover{
+    opacity:0.7;
+}
+.blau button a{
+    border-color: #fff;
+}
+.blau button a:hover{
+    background-color:#fff;
+    color:#00a8ff;
+}
+
+/* ----------------- Tabellen */
+
+table.blau{
+    transform: scale(1.03)
+}
+table.blau:hover{
+    transform: scale(1.06)
+}
+table.blau tr{
+    border-bottom: 1px solid #fff;
+}
+table.blau tr th, table.blau tr td{
+    color:#fff;
+}
+table.blau tr td.preis{
+    background-color:#fff;
+    color:#00a8ff;
+}
+
+
+/* --------------------------------- Grid */
+
+.container-full{
+    display:flex;   
+}
+.container-full>div{
+    padding:0; 
+}
+.container-full div img{
+    margin:0; 
+}
+.container{
+    display:flex;
+    padding: 0 25px;
+    
+}
+.container-small{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    padding: 0 25px;
+}
+.spalte-12{
+    width:100%;
+    padding: 0 15px;
+    box-sizing:border-box;
+}
+.spalte-6{
+    width:50%;
+    padding: 0 15px;
+    box-sizing:border-box;
+}
+.spalte-4{
+    width:33.33%;
+    padding: 0 15px;
+    box-sizing:border-box;
+}
+.spalte-3{
+    width:25%;
+    padding: 0 15px;
+    box-sizing:border-box;
+}
+
+.innenabstand{
+    display:flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.innenabstand div{
+    padding: 0 20%;
+}
+
+/* --------------------------------- Abstände */
+
+.abstand-100-100{
+    padding: 100px 0 100px 0;
+}
+
+
+/* --------------------------------- Main */
+
+main {
+    padding-top: 123px;
+}
+main img{
+    width:100%;
+    margin-bottom:30px;
+    display:block;
+}
+
+/* --------------------------------- Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    box-shadow: 0 0 40px #00000011;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+header nav{
+    display:flex;
+    align-items: center;
+}
+header nav ul{
+    display:flex;
+    list-style:none;
+    font-size:20px;
+    font-weight:300;
+    text-transform:uppercase;
+}
+header nav ul li {
+    margin-left: 30px;
+}
+header nav ul li:hover>.submenu{
+    visibility: visible;
+    opacity: 1;
+}
+header nav ul li a.active{
+    color:#00a8ff;
+}
+header nav ul li a:hover{
+    color:#00a8ff;
+}
+
+
+/* ------------------- Submenu */
+
+header nav ul li .submenu{
+    display: block;
+    position: absolute;
+    padding-top: 49px;
+    visibility: hidden;
+    transition: 0.3s;
+    opacity: 0;
+}
+header nav ul li .submenu li{
+    margin-left:0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+header nav ul li .submenu li:first-child{
+    border-top: 1px solid #eee;   
+}
+header nav ul li .submenu li a{
+    padding: 20px;
+    display:block;
+}
+
+header nav ul li .submenu .submenu{
+    top:0;
+    right:100%;
+    padding-top:0;
+}
+
+
+/* --------------------------------- Titelbild */
+
+#titelbild{
+    background-image:url(images/titelbild-startseite.jpg);
+    padding: 200px 0;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+/* --------------------------------- Tabellen */
+
+table{
+    background-color:#fff;
+    box-shadow: 0 0 60px #00000011;
+    width: 100%;
+    transition: 0.3s;
+    border-collapse:collapse;
+}
+table:hover{
+    transform: scale(1.03);
+}
+table tr{
+    border-bottom: 1px solid #00a8ff;
+}
+table tr:last-child{
+    border: none;
+}
+table tr th{
+    font-size:30px;
+    padding:30px;
+    text-transform: uppercase;
+}
+table tr td{
+    padding: 20px 0;
+}
+table tr td.preis{
+    font-size: 30px;
+    background-color:#00a8ff;
+    color:#fff;
+}
+
+/* --------------------------------- Formular */
+
+form{
+    background-color:#fff;
+    box-shadow: 0 0 40px #00000011;
+    padding: 40px;
+    display:flex;
+    justify-content: space-between;
+    
+    border: 1px solid #eee;
+    border-radius:40px;
+}
+form input{
+    width: 48%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom:4%;
+    border: 1px solid #eee;
+    font-size:19px;
+    background-color:#fcfcfc;
+    font-weight:300;
+}
+form textarea{
+    width:100%;
+    padding: 20px;
+    margin-bottom:4%;
+    border: 1px solid #eee;
+    background-color:#fcfcfc;
+    font-size:19px;
+    font-weight:300;
+}
+form input[type="submit"]{
+    background-color:#00a8ff;
+    color:#fff;
+}
+form input[type="submit"]:hover{
+    background-color:#0094eb;
+    cursor:pointer;
+}
+
+/* --------------------------------- Angebot */
+
+#angebot{
+    background-color:#fafafa;
+}
+
+
+/* --------------------------------- Footer */
+
+footer nav ul{
+    list-style:none;
+    text-transform: uppercase;
+    font-weight:300;
+    line-height:30px;
+}
+
+footer #rechtliches nav ul{
+    display:flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+footer #rechtliches nav ul li{
+   margin: 0 10px;
+}
+
+/* --------------------------------- Scroll to top */
+
+#scroll-to-top i {
+    position: fixed;
+    background-color: white;
+    bottom: 40px;
+    right: 40px;
+    font-size: 35px;
+    color: #006ea7;
+    padding: 20px;
+    box-shadow: 0 0 40px #00000022;
+    transition: 0.3s;
+}
+#scroll-to-top i:hover {
+    transform: scale(1.05);
+    color: #00a8ff;
+}
+
+/* --------------------------------- Responsive Design */
+
+@media all and (max-width:1100px){
+    
+    /* --------------------------------- Grid */
+    
+    .spalte-6{
+        width:100%;
+    }
+    .spalte-6:nth-child(1){
+        margin-bottom:40px;
+    }
+    .container-full .spalte-6{
+        margin-bottom:0px;
+    }
+    .spalte-3{
+        width:50%; 
+    }
+    .spalte-3:nth-child(1),.spalte-3:nth-child(2) {
+        margin-bottom: 40px;
+    }
+
+    .innenabstand div{
+        padding: 20%;
+    }
+    
+    /* --------------------------------- Header */
+    
+    header nav ul li{
+        margin: 0 20px 5px 0;
+    }
+    header nav{
+        margin-top:20px;
+    }
+    
+
+}
+  
+@media all and (max-width:850px){
+    
+    /* --------------------------------- Grid */
+    
+    .spalte-4{
+        width:100%;
+    }
+    .spalte-4:nth-child(2){
+        margin: 40px 0;
+    }
+}
+
+
+@media all and (max-width:600px){
+    
+    /* --------------------------------- Allgemein */
+    
+    h1{
+        font-size:30px;
+    }
+    h2{
+        font-size:25px;
+    }
+    button a{
+        font-size:15px;
+    }
+    
+    /* --------------------------------- Grid */
+    
+    .spalte-3{
+        width:100%;
+    }
+    .spalte-3:nth-child(3){
+        margin-bottom:40px;
+    }
+    
+    /* --------------------------------- Header */
+    .submenu {
+        display: none!important;
+    }
+    
+    /* --------------------------------- Titelbild */
+        
+    #titelbild{
+        background-position-x: -105px;
+    }
+    
+    /* --------------------------------- Formular */
+    
+    form input, form textarea{
+        font-size:15px;
+    }
+}
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
